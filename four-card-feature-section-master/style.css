@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;400;600&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  background-color: hsl(0, 6%, 87%);
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  margin: 20px auto;
+  max-width: 500px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 200;
+}
+
+h1 span {
+  font-weight: 600;
+}
+
+p {
+  color: hsl(229, 6%, 66%);
+}
+
+p:hover {
+  color: #000;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.box {
+  background-color: white;
+  padding: 30px;
+  width: 350px;
+  margin: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.24);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+}
+
+.box-red::after {
+  background-color: hsl(0, 78%, 62%);
+}
+
+.box-cyan::after {
+  background-color: hsl(180, 62%, 55%);
+}
+
+.box-orange::after {
+  background-color: hsl(34, 97%, 64%);
+}
+
+.box-blue::after {
+  background-color: hsl(212, 86%, 64%);
+}
+
+.box h2 {
+  margin: 0;
+}
+
+.box img {
+  display: block;
+  margin-left: auto;
+}
+
+.box p {
+  margin: 15px 0 30px;
+}
+
+@media screen and (min-width: 1156px) {
+  .box-push {
+    transform: translateY(50%);
+  }
+}
