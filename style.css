@@ -12,6 +12,10 @@ input {
 .container {
   width: 100%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
@@ -45,47 +49,12 @@ h1::before {
   }
 }
 
-.top-content {
-  background-color: #f0f0f0;
-  width: 90%;
-  margin: 0 auto 20px auto;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  border-radius: 5px;
-  box-shadow: 3px 3px 5px lightgray;
-}
-
-h3 {
-  height: 100%;
-  padding: 0 15px;
-  line-height: 60px;
-  color: white;
-  background-color: lightblue;
-}
-
-label {
-  display: inline-block;
-  height: 100%;
-  padding: 0 10px;
-  margin: 0 20px;
-  line-height: 60px;
-  font-size: 18px;
-  color: gray;
-  cursor: pointer;
-  transition: color 0.7s;
-}
-
-label:hover {
-  color: black;
-}
-
 .project-gallery {
-  width: 90%;
-  margin: auto;
+  width: 80%;
+  height: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 15px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 55px;
 }
 
 .pic {
@@ -104,6 +73,7 @@ label:hover {
 }
 
 .title {
+  text-align: center;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -127,4 +97,17 @@ label:hover {
 .title a:hover {
   color: darkgray;
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .project-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .project-gallery {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
